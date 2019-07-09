@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interacciones CSS</title>
+    <style>
+        .body{
+            display:flex;
+
+
+        }
+        .pelota{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* transition-property: width, heigth; */
+            /* transition-duration: 1s; */
+            /* transition-delay: 1ms; */
+            /* transition-timing-function: ease; */
+            /* transition: propiedad tiempo delay timing-function; */
+            transition: width 1s ease;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .pelota.a{
+            background: blue;
+            left: 0;
+        }
+        .pelota.b{
+            background: yellow;
+            right: 0;
+        }
+        .canasta{
+            border: 1px solid red;
+            position: relative;
+            height: 100px;
+            width: 100%;
+        }
+        .cansata:hover .pelota.a{
+            right:calc(50% - 100px);            
+        }
+        .cansata:hover .pelota.b{
+            left: calc(50% - 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="canasta">
+            <div class="pelota a">Hola</div>
+            <div class="pelota b">Mundo</div>
+    </div>
+    </body>
+</html>
