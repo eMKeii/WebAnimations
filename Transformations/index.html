@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transfoirmaciones Sintaxis</title>
+    <style>
+        body{
+           display:flex;
+           height: 100vh;
+           align-items: center;
+           justify-content: center; 
+           color: white;
+        }
+        .pelota {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* transition-property: width, heigth; */
+            /* transition-duration: 1s; */
+            /* transition-delay: 1ms; */
+            /* transition-timing-function: ease; */
+            /* transition: propiedad tiempo delay timing-function; */
+            transition: 1s;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pelota.a{
+            background: red;
+            left: 0;
+        }
+        .pelota.b{
+            background: blue;
+            right: 0;
+        }
+        .pelota:hover{
+        }
+        .canasta{
+            border: 1px solid red;
+            position: relative;
+            height: 100px;
+            width: 100%;
+            /* transform: rotate(45deg) skew(45deg) translate(100px) scale(1.5); */
+            
+        }
+        .canasta:hover .pelota.a{
+            left: calc(50% - 100px);            
+        }
+        .canasta:hover .pelota.b{
+            right: calc(50% - 100px);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="canasta">
+        <div class="pelota a">Hola</div>
+        <div class="pelota b">Mundo!</div>
+    </div>
+</body>
+</html>
